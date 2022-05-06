@@ -7,4 +7,5 @@ export interface Persona {
     email: string;
     acercaDe: string;
     urlImagen: string;
+    bannerImagen: string;
 }

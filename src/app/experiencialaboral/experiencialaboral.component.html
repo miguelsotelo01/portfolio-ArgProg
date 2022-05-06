@@ -1,3 +1,4 @@
+<div class="row">
 <div class="fondo">
     <div class="contenido" id="main-container">
         <div id="trabajos">
@@ -12,7 +13,7 @@
                 <p>{{exp.inicio}} / {{exp.finalizacion}} </p>
             </div>
             <div id="eliminar-editar-trabajos" *ngIf="isAdmin">                    
-                <button (click)="onOpenModal(exp,'edit')" type="button" class="botones_contenido">
+                <button (click)="onOpenModal(exp,'edit')" type="button" class="botones_contenido" data-target="updateExperienciaModal">
                     <i class="fa-solid fa-pen"></i>
                 </button>
                 <button (click)="onOpenModal(exp,'delete')" type="button" class="botones_contenido">
@@ -72,13 +73,13 @@
                     <input ngModel="{{editExperiencia?.puesto}} " type="text" name="puesto"  class="form-control"><br>
                     <label for="nombreEmpresa">Empresa</label><br>
                     <input ngModel="{{editExperiencia?.nombreEmpresa}}" type="text" name="nombreEmpresa"  class="form-control">
-                    <label for="fechaInicio">Fecha de Inicio</label><br>
-                    <input ngModel="{{editExperiencia?.inicio}}" type="text" name="fechaInicio"  class="form-control">
-                    <label for="fechaFinalizacion">Fecha de Finalización</label><br>
-                    <input ngModel="{{editExperiencia?.finalizacion}}" type="text" name="fechaFinalizacion"  class="form-control">
+                    <label for="inicio">Fecha de Inicio</label><br>
+                    <input ngModel="{{editExperiencia?.inicio}}" type="text" name="inicio"  class="form-control">
+                    <label for="finalizacion">Fecha de Finalización</label><br>
+                    <input ngModel="{{editExperiencia?.finalizacion}}" type="text" name="finalizacion"  class="form-control">
                     <label for="descripcion">Descripción</label><br>
                     <input ngModel="{{editExperiencia?.descripcion}}" type="text" name="descripcion"  class="form-control">
-                    <input type="hidden" name="id" ngModel="{{editExperiencia?.id}} ">
+                    <input type="hidden" name="id" ngModel="{{editExperiencia?.id}}" class="form-control">
                     <div class="modal-footer">
                         <button id="update-experiencia-modal" type="button" class="btn" data-dismiss="modal">Cancelar</button>
                         <button (click)="onUpdateExperiencia(editForm.value)" type="button" class="btn" data-dismiss="modal">Guardar cambios</button>
@@ -113,4 +114,4 @@
         </div>
     </div>
 </div>
-
+</div>

@@ -87,9 +87,9 @@ footer {
 .subir {
     height: 35px;
     width: 35px;
-    background-color: #7C0E74;
+    background-color: blue;
     border: 2px solid #fff;
-    box-shadow: 0 0 5px rgb(185, 22, 164);
+    box-shadow: 0 0 5px blue;
     position: fixed;
     bottom: 65px;
     right: 20px;

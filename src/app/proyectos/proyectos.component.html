@@ -1,4 +1,5 @@
-<div class="fondo">
+<div class="row">
+    <div class="fondo">
     <div class="fondo" id="proyectos">
         <div class="contenido" id="main-container">
             <div class="proyectostitulo">
@@ -29,7 +30,7 @@
     </div>
 </div>
 
-<!-- Modal para agregar Skill -->
+<!-- Modal para agregar proyectos -->
 <div class="modal fade" id="addProyectosModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addProyectoModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -42,13 +43,17 @@
             <div class="modal-body">
                 <form #addForm="ngForm" (ngSubmit)="onAddProyecto(addForm)">
                     <label for="nombreProyecto">Nombre del Proyecto</label><br>
-                    <input ngModel type="text" name="nombreProyecto"  class="form-control">
+                    <input ngModel type="text" name="nombre"  class="form-control">
+
                     <label for="descripcion">Descripción</label><br>
                     <input ngModel type="text" name="descripcion"  class="form-control">
+
                     <label for="urlImagen">Imagen del Proyecto</label><br>
                     <input ngModel type="text" name="urlImagen"  class="form-control">
+
                     <label for="urlProyecto">Url del Proyecto</label><br>
                     <input ngModel type="text" name="urlProyecto"  class="form-control">
+                    
                     <div class="modal-footer">
                         <button  type="button" id="add-proyecto-modal" class="btn" data-dismiss="modal">Cancelar</button>
                         <button [disabled]="addForm.invalid" type="submit" class="btn">Agregar</button>
@@ -59,7 +64,7 @@
         </div>
     </div>
 </div>
-<!-- Modal para actualizar Skill -->
+<!-- Modal para actualizar proyectos -->
 <div class="modal fade" id="updateProyectosModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="updateProyectoModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -82,15 +87,11 @@
                     </div>
                 </form>
             </div>
-            
-            
-            
-            
         </div>
     </div>
 </div>
 
-<!-- Modal para borrar Skill -->
+<!-- Modal para borrar proyectos -->
 <div class="modal fade" id="deleteProyectosModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="deleteProyectoModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -110,6 +111,6 @@
         </div>
     </div>
 </div>
-
+</div>
 
 

@@ -6,8 +6,7 @@
 
 
 .fondo {
-    background-color: #f8e6f1;
-    /* background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.7)), url(../../assets/img/wallpaper.jpg);*/
+    background-color: lightblue;
 } 
 
 
@@ -16,24 +15,19 @@
     width: 100%;
     height: auto;
     padding: 40px;
-    
-    /* background-image: url(../../assets/img/pruebabackground.jpg);
-    background-size: cover; */
-    
 }
 
-#estudios {
+#educacion {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-#estudios h4 {
+#educacion h4 {
     font-size: 25px;
     font-weight: bolder;
-    color: #b1189c;
-    border-bottom: 1px #b1189c solid;
+    color: blue;
     text-transform: uppercase;
     text-align: center;
     width: 100%;
@@ -42,12 +36,12 @@
     
 }
 
-#estudios h4 button {
+#educacion h4 button {
     text-align: right;
 }
 
 
-.estudios {
+.educacion {
     justify-items:right;
     padding: 5px;
     width: 90%;
@@ -74,25 +68,25 @@
     width: 100%;
 }
 
-.datosestudios {
+.datoseducacion {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    background-color: #E0C3D5;  
+    background-color: gray;  
     padding: 20px;
     border-radius: 4px;
     transition: 0.2s;
 }
 
-.datosestudios:hover {
-    box-shadow: 2px 14px 15px #b1189c;
+.datoseducacion:hover {
+    box-shadow: 2px 14px 15px white;
     transition: 0.2s;
 }
 
-.datosestudios p {
+.datoseducacion p {
     width: 80%;
     height: 80%;
     text-align: center;
@@ -106,7 +100,7 @@
     
 }
 
-.logoestudios {
+.logoeducacion {
     width: 25%;
     border-radius: 50%;
 }
@@ -117,7 +111,7 @@
 }
 
 
-#eliminar-editar-estudios {
+#eliminar-editar-educacion {
     display: flex;
     font-size: 10px;
     height: 100%;
@@ -134,7 +128,7 @@ i {
 
 
 
-/* botones de edición */
+/* botones de edición*/
 
 .botones_contenido {
     
@@ -180,7 +174,7 @@ i {
     border: none;
 }
 
-/* contenido educacion */
+/* contenido estudios*/
 
 
 
@@ -263,5 +257,3 @@ i {
     padding: 3px 5px;
     color: #720F64;
 }
-
-

@@ -1,7 +1,7 @@
 <div class="fondo">
     <div class="contenido" id="main-container">
         <div id="educacion" >
-            <h4 class="educacion"> Educacion y Capacitaciones <button type="button" class="botones_contenido" (click)="onOpenModal(null!,'add')" *ngIf="isAdmin">
+            <h4 class="educacion"> Educacion y Capacitaciones <button type="button" class="btn btn-primary" (click)="onOpenModal(null!,'add')" *ngIf="isAdmin">
                 <i class="fa-solid fa-plus"></i>
             </button>
             </h4>
@@ -9,12 +9,12 @@
                 <div class="columnas" *ngFor="let edu of educaciones">
                     <div class="datoseducacion">
                         <img class="logoeducacion" src={{edu.urlLogo}} alt="logo de la institucion"> 
-                        <p><span class="titulo">{{edu.tituloEstudios}}</span><br> {{edu.institucion}} - {{edu.inicio}} </p>
+                        <p><span class="titulo">{{edu.tituloEstudios}}</span><br> {{edu.institucion}} - {{edu.inicio}}-{{edu.finalizacion}} </p>
                         <span id="eliminar-editar-educacion" *ngIf="isAdmin">                        
-                            <button type="button" class="botones_contenido" (click)="onOpenModal(edu,'edit')">
+                            <button type="button" class="btn btn-primary" (click)="onOpenModal(edu,'edit')">
                                 <i class="fa-solid fa-pen"></i>
                             </button>
-                            <button (click)="onOpenModal(edu,'delete')" type="button" class="botones_contenido">
+                            <button (click)="onOpenModal(edu,'delete')" type="button" class="btn btn-primary">
                                 <i class="fa-solid fa-eraser"></i>   
                             </button>
                         </span>
@@ -24,12 +24,12 @@
         </div>
     </div>
 </div>
-<!-- Modal para agregar Experiencia -->
+<!-- Modal para agregar Educacion -->
 <div class="modal fade" id="addEducacionModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addExperienciaModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Agregar Habilidades</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Agregar educacion</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -68,17 +68,32 @@
             </div>
             <div class="modal-body">
                 <form #editForm="ngForm">
+                    <div class="form-group">
                     <label for="puesto">Título</label><br>
-                    <input ngModel="{{editEducacion?.tituloEstudios}} " type="text" name="tituloEstudios"  class="form-control">
+                    <input ngModel="{{editEducacion?.tituloEstudios}} " type="text" name="tituloEstudios"  class="form-control" placeholder="titulo educativo">
+                    </div>
+
+                    <input type="hidden" name="id" ngModel="{{editEducacion?.id}}" id="id">
+
+                    <div class="form-group">
                     <label for="nombreEmpresa">institucion</label><br>
-                    <input ngModel="{{editEducacion?.institucion}}" type="text" name="institucion"  class="form-control">
-                    <label for="fechaInicio">Fecha de Inicio</label><br>
-                    <input ngModel="{{editEducacion?.inicio}}" type="text" name="fechaInicio"  class="form-control">
-                    <label for="fechaFinalizacion">Fecha de Finalización</label><br>
+                    <input ngModel="{{editEducacion?.institucion}}" type="text" name="institucion"  class="form-control" placeholder="institucion educativa">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="Inicio">Fecha de Inicio</label><br>
+                    <input ngModel="{{editEducacion?.inicio}}" type="text" name="inicio"  class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="finalizacion">Fecha de Finalización</label><br>
                     <input ngModel="{{editEducacion?.finalizacion}}" type="text" name="finalizacion"  class="form-control">
-                    <label for="descripcion">Logo de la institucion</label><br>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="urlLogo">Logo de la institucion</label><br>
                     <input ngModel="{{editEducacion?.urlLogo}}" type="text" name="urlLogo"  class="form-control">
-                    <input type="hidden" name="id" ngModel="{{editEducacion?.id}} "><br>
+                    </div><br>
                     <div class="modal-footer">
                         <button id="update-estudios-modal" type="button" class="btn" data-dismiss="modal">Cancelar</button>
                         <button (click)="onUpdateEducacion(editForm.value)" type="button" class="btn" data-dismiss="modal">Guardar cambios</button>
