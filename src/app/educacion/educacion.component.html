@@ -1,7 +1,7 @@
 <div class="fondo">
     <div class="contenido" id="main-container">
         <div id="educacion" >
-            <h4 class="educacion"> Educacion y Capacitaciones <button type="button" class="btn btn-primary" (click)="onOpenModal(null!,'add')" *ngIf="isAdmin">
+            <h4 class="educacion"> Educacion y Capacitaciones <button type="button" class="btn" (click)="onOpenModal(null!,'add')" *ngIf="isAdmin">
                 <i class="fa-solid fa-plus"></i>
             </button>
             </h4>
@@ -11,11 +11,11 @@
                         <img class="logoeducacion" src={{edu.urlLogo}} alt="logo de la institucion"> 
                         <p><span class="titulo">{{edu.tituloEstudios}}</span><br> {{edu.institucion}} - {{edu.inicio}}-{{edu.finalizacion}} </p>
                         <span id="eliminar-editar-educacion" *ngIf="isAdmin">                        
-                            <button type="button" class="btn btn-primary" (click)="onOpenModal(edu,'edit')">
-                                <i class="fa-solid fa-pen"></i>
+                            <button type="button" class="btn" (click)="onOpenModal(edu,'edit')">
+                                <i class="fa-solid fa-file-pen"></i>
                             </button>
-                            <button (click)="onOpenModal(edu,'delete')" type="button" class="btn btn-primary">
-                                <i class="fa-solid fa-eraser"></i>   
+                            <button (click)="onOpenModal(edu,'delete')" type="button" class="btn">
+                                <i class="fa-solid fa-trash-can"></i>  
                             </button>
                         </span>
                     </div>
@@ -107,7 +107,6 @@
         </div>
     </div>
 </div>
-
 <!-- Modal para borrar Experiencia -->
 <div class="modal fade" id="deleteEducacionModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="deleteEducacionModal" aria-hidden="true">
     <div class="modal-dialog">

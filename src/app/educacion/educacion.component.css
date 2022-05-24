@@ -7,6 +7,9 @@
 
 .fondo {
     background-color: lightblue;
+    border: 10px solid gray;
+    border-radius: 20px;
+    margin: 5px;
 } 
 
 
@@ -27,8 +30,8 @@
 #educacion h4 {
     font-size: 25px;
     font-weight: bolder;
-    color: blue;
-    text-transform: uppercase;
+    color: black;
+    text-decoration: underline;
     text-align: center;
     width: 100%;
     justify-content: center;
@@ -50,8 +53,6 @@
     
 
 }
-
-
 
 .container {
     width: 100%;
@@ -75,14 +76,14 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    background-color: gray;  
+    background-color: #0091ea;  
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 20px;
     transition: 0.2s;
 }
 
 .datoseducacion:hover {
-    box-shadow: 2px 14px 15px white;
+    box-shadow: 2px 14px 15px gray;
     transition: 0.2s;
 }
 
@@ -101,8 +102,8 @@
 }
 
 .logoeducacion {
-    width: 25%;
-    border-radius: 50%;
+    width: 30%;
+    border-radius: 30%;
 }
 
 .titulo {
@@ -119,15 +120,10 @@
     justify-self: flex-start;
     
 }
-
 i {
-    color: #b1189c;
-    font-size: 10px;
+    color: black;
+    font-size: 20px;
 }
-
-
-
-
 /* botones de edición*/
 
 .botones_contenido {
@@ -146,8 +142,8 @@ i {
 .boton_edicion_texto {
     padding: 2px 10px;
     margin-top: 10px;
-    background: #7C3772;
-    color:#f8e6f1;
+    background: black;
+    color:black;
     border-radius: 5px;
     font-size: 10px;
     border: none;
@@ -160,15 +156,15 @@ i {
     height: 25px;
     border-radius: 50%;
     border: none;
-    background:#f8e6f1;
-    color: #7C3772;
+    background:black;
+    color: black;
 }
 
 .boton_eliminar {
     padding: 2px 10px;
     margin-top: 10px;
-    background: #7C3772;
-    color:#f8e6f1;
+    background: black;
+    color:black;
     border-radius: 5px;
     font-size: 10px;
     border: none;
@@ -188,7 +184,7 @@ i {
     justify-content: center;
     align-self: center;
     top: 10%;
-    left: 25%;
+    left: 30%;
 }
 
     
@@ -200,12 +196,11 @@ i {
     border: none;
     background: none;
     text-align: right;
-    color: #720F64;
+    color: lightblue;
 }
 
 .modal-header h5 {
-    color: #720F64;
-    text-transform: uppercase;
+    color: black;
     font-weight: bold;
 }
 
@@ -221,7 +216,7 @@ i {
 .modal-body form label {
     line-height: 7px;
     margin-top: 5px;
-    color: #720F64;
+    color: black;
 }
 
 .modal-footer {
@@ -234,7 +229,7 @@ i {
 
 .modal-footer button {
     border: none;
-    color: #720F64;
+    color: black;
     margin: 5px;
     padding: 2px 5px;
     border-color: none;
@@ -243,7 +238,7 @@ i {
 
 .modal-footer .boton-editar {
     border: none;
-    color: #720F64;
+    color: black;
     margin: 5px;
     padding: 2px 5px;
     border-color: none;

@@ -1,5 +1,4 @@
 <div class="row">
-<div class="fondo">
     <div class="contenido" id="main-container">
         <div id="trabajos">
             <h4 class="trabajos">Experiencia Laboral <button *ngIf="isAdmin" (click)="onOpenModal(null!,'add')" type="button" class="botones_contenido">
@@ -10,27 +9,24 @@
             <div class="listatrabajosparrafos">
                 <p class="nombreempresa"><span class="titulo">{{exp.puesto}}</span> - {{exp.nombreEmpresa}}</p>
                 <p>{{exp.descripcion}}</p>
-                <p>{{exp.inicio}} / {{exp.finalizacion}} </p>
+                <p>{{exp.inicio}} - {{exp.finalizacion}} </p>
             </div>
             <div id="eliminar-editar-trabajos" *ngIf="isAdmin">                    
                 <button (click)="onOpenModal(exp,'edit')" type="button" class="botones_contenido" data-target="updateExperienciaModal">
-                    <i class="fa-solid fa-pen"></i>
+                    <i class="fa-solid fa-file-pen"></i>
                 </button>
                 <button (click)="onOpenModal(exp,'delete')" type="button" class="botones_contenido">
-                    <i class="fa-solid fa-eraser"></i>
+                    <i class="fa-solid fa-trash-can"></i>
                 </button>     
             </div> 
         </div>
     </div>
-</div>
-
-
-<!-- Modal para agregar Experiencia -->
+    <!-- Modal para agregar Experiencia -->
 <div class="modal fade" id="addExperienciaModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addExperienciaModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Agregar Habilidades</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Agregar Experiencia</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -52,8 +48,7 @@
                         <button [disabled]="addForm.invalid" type="submit" class="btn">Agregar</button>
                     </div>
                 </form>
-            </div>
-            
+            </div>  
         </div>
     </div>
 </div>
@@ -69,15 +64,15 @@
             </div>
             <div class="modal-body">
                 <form #editForm="ngForm">
-                    <label for="puesto">Puesto</label><br>
-                    <input ngModel="{{editExperiencia?.puesto}} " type="text" name="puesto"  class="form-control"><br>
-                    <label for="nombreEmpresa">Empresa</label><br>
+                    <label for="puesto">Puesto:</label><br>
+                    <input ngModel="{{editExperiencia?.puesto}} " type="text" name="puesto"  class="form-control">
+                    <label for="nombreEmpresa">Empresa:</label><br>
                     <input ngModel="{{editExperiencia?.nombreEmpresa}}" type="text" name="nombreEmpresa"  class="form-control">
-                    <label for="inicio">Fecha de Inicio</label><br>
+                    <label for="inicio">Fecha de Inicio:</label><br>
                     <input ngModel="{{editExperiencia?.inicio}}" type="text" name="inicio"  class="form-control">
-                    <label for="finalizacion">Fecha de Finalización</label><br>
+                    <label for="finalizacion">Fecha de Finalización:</label><br>
                     <input ngModel="{{editExperiencia?.finalizacion}}" type="text" name="finalizacion"  class="form-control">
-                    <label for="descripcion">Descripción</label><br>
+                    <label for="descripcion">Descripción:</label><br>
                     <input ngModel="{{editExperiencia?.descripcion}}" type="text" name="descripcion"  class="form-control">
                     <input type="hidden" name="id" ngModel="{{editExperiencia?.id}}" class="form-control">
                     <div class="modal-footer">
@@ -93,7 +88,6 @@
         </div>
     </div>
 </div>
-
 <!-- Modal para borrar Experiencia -->
 <div class="modal fade" id="deleteExperienciaModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="deleteExperienciaModal" aria-hidden="true">
     <div class="modal-dialog">
@@ -105,13 +99,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Esta acción eliminará  "{{deleteExperiencia?.puesto}}". ¿Desea continuar?</p>
+                <p>Esta acción eliminará esta experiencia. ¿Desea continuar?</p>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn" data-dismiss="modal">No</button>
-            <button (click)="onDeleteExperiencia(deleteExperiencia.id)" type="button" class="btn" data-dismiss="modal">Sí</button>
+            <button type="button" class="btn" data-dismiss="modal">Cancelar</button>
+            <button (click)="onDeleteExperiencia(deleteExperiencia.id)" type="button" class="btn" data-dismiss="modal">Borrar</button>
             </div>
         </div>
     </div>
 </div>
 </div>
+

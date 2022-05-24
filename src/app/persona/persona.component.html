@@ -1,7 +1,5 @@
-<div class="row">
-<div class="container" *ngFor="let persona of personas" id="main-container">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <img [src]="persona.bannerImagen" class="img-fluid banner" alt="banner" width="100%" height="auto">
+<div class="container" *ngFor="let persona of personas">
+        <img [src]="persona.bannerImagen" class="img-fluid" alt="banner">
         <img src={{persona.urlImagen}} alt="foto de perfil" id="fotoPerfil" class="perfil"> 
         <div class="info">
             <h1 id="titulo1">datos personales</h1>
@@ -9,25 +7,22 @@
             <span><h4>ocupacion:   {{persona.ocupacion}}</h4></span>
             <span><h4>telefono:    {{persona.telefono}}</h4></span>
             <span><h4>email:       {{persona.email}}</h4></span>
-        </div>
-            <div class="descripcionPer">
-                <span><h2 id="titulo2">Acerca De Mi</h2></span>
+            <span><h2 id="titulo2">Acerca De Mi</h2></span>
             <span><h4>{{persona.acercaDe}}</h4></span>
-            </div>
-        <div *ngIf="isAdmin">
-            <button (click)="onOpenModal(null!,'add')" type="button" class="btn btn-primary">
+            <span>contacto:   <a href="https://www.linkedin.com/in/miguel-sotelo-6479ab218/">Linkedin</a></span>
+        </div>
+        <div class="botones"   *ngIf="isAdmin">
+            <!--<button (click)="onOpenModal(null!,'add')" type="button" class="btn">
                 <i class="fa-solid fa-plus"></i>
+            </button>-->
+            <button (click)="onOpenModal(persona,'edit')" type="button" class="btn"data-bs-target="#updatePersonaModal">
+                <i class="fa-solid fa-file-pen"></i>
             </button>
-            <button (click)="onOpenModal(persona,'edit')" type="button" class="btn btn-primary"data-bs-target="#updatePersonaModal">
-                <i class="fa-solid fa-pen"></i>
-            </button>
-            <button (click)="onOpenModal(persona,'delete')"  type="button" class="btn btn-primary">
-                <i class="fa-solid fa-eraser"></i>  
-            </button>
+            <!--<button (click)="onOpenModal(persona,'delete')"  type="button" class="btn">
+                <i class="fa-solid fa-trash-can"></i>  
+            </button>-->
         </div>
-        </div>
-</div>
-<!-- Modal para agregar persona -->
+        <!-- Modal para agregar persona -->
 <div class="modal fade" id="addPersonaModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addSkillsModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -101,7 +96,6 @@
         </div>
     </div>
 </div>
-
 <!-- Modal para borrar persona-->
 <div class="modal fade" id="deletePersonaModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">

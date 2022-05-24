@@ -7,6 +7,9 @@
     background-color: lightblue;
     background-size: cover;
     min-width: 100%;
+    border: 10px solid gray;
+    border-radius: 20px;
+    margin: 5px;
 }
 .contenido {
     display: grid;
@@ -31,9 +34,9 @@
 #skills h4 {
     font-size: 25px;
     font-weight: bolder;
-    color: blue;
-    text-transform: uppercase;
+    color: black;
     text-align: center;
+    text-decoration: underline;
     width: 100%;
     justify-content: center;
     justify-self: center;
@@ -46,9 +49,9 @@
     padding: 2px;
 }
 .skills button i{
-    font-size: 15px;
+    font-size: 20px;
     padding: 5px;
-    color: blue;
+    color: black;
 }
 
 
@@ -86,13 +89,11 @@
 .bar {
     background: #F8E6F1;
     display: block;
-    height: 10px;
-    /* border: 1px solid rgba(153, 149, 149, 0.3); */
-    /* border-radius: 10px; */
+    height: 15px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    text-align: center;
 }
 
 .bar:hover {
@@ -102,49 +103,8 @@
 .bar span {
     height: 20px;
     float: left;
-    background: rgba(252,103,103,1);
+    background: blue;
 }
-/* 
-.html {
-    width: 80%;
-    animation: html 3s;
-}
-.css {
-    width: 70%;
-    animation: css 3s;
-}
-.javascript {
-    width: 40%;
-    animation: javascript 3s;
-}
-.angular {
-    width: 60%;
-    animation: angular 3s;
-}
-.mysql {
-    width: 60%;
-    animation: mysql 3s;
-}
-.equipo {
-    width: 80%;
-    animation: equipo 3s;
-}
-.flexibilidad {
-    width: 90%;
-    animation: flexibilidad 3s;
-}
-.responsabilidad {
-    width: 100%;
-    animation: responsabilidad 3s;
-}
-.gestion {
-    width: 80%;
-    animation: gestion 3s;
-}
-.liderazgo {
-    width: 90%;
-    animation: liderazgo 3s;
-} */
 
 @keyframes html {
     0% {
@@ -154,18 +114,15 @@
         width: 80%;
     }
 }
-
-
 .cajas {
-    /* display: flex;*/
+    display: flex;
     flex-wrap: nowrap;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     flex-wrap: nowrap;
     padding: 20px;
 } 
-
 .hardskills {
     font-family: Helvetica, sans-serif;
     list-style: none;
@@ -176,11 +133,8 @@
     height: 100%;
     flex-wrap: nowrap;
     line-height: 1px;
-    justify-self: center;
-    
-    
+    justify-self: center;  
 }
-
 .hardskills h5,
 .softskills h5 {
     font-size: 1.1em;
@@ -188,39 +142,29 @@
     text-align: center;
     margin: 5px;
 }
-
 .hardskills li,
 .softskills li {
     margin: 7px 0;
     padding: 5px;
 }
-
 #eliminar-editar-skills,
 #eliminar-editar-trabajos {
-    text-align: end;
-    
+    text-align: end;  
 }
-
 i {
-    color: #b1189c;
+    color: black;
     font-size: 10px;
 }
-
-
-
 .skillnombre {
     font-weight: bolder;
     color: black;
     font-size: 17px;
 }
-
 .porc {
     font-weight: bolder;
     line-height: 18px;
     font-size: 15px;
-    color: #851275;
-
-    
+    color: black;
 }
 /*estilos del modal*/
 
@@ -229,8 +173,8 @@ i {
     padding: 15px;
     justify-content: center;
     align-self: center;
-    top: 10%;
-    left: 25%;
+    top: 15%;
+    left: 30%;
 }
 
     
@@ -242,12 +186,11 @@ i {
     border: none;
     background: none;
     text-align: right;
-    color: #720F64;
+    color: black;
 }
 
 .modal-header h5 {
-    color: #720F64;
-    text-transform: uppercase;
+    color: black;
     font-weight: bold;
 }
 
@@ -263,7 +206,7 @@ i {
 .modal-body form label {
     line-height: 7px;
     margin-top: 5px;
-    color: #720F64;
+    color: black;
 }
 
 .modal-footer {
@@ -276,7 +219,7 @@ i {
 
 .modal-footer button {
     border: none;
-    color: #720F64;
+    color: black;
     margin: 5px;
     padding: 2px 5px;
     border-color: none;
@@ -285,7 +228,7 @@ i {
 
 .modal-footer .boton-editar {
     border: none;
-    color: #720F64;
+    color: black;
     margin: 5px;
     padding: 2px 5px;
     border-color: none;
