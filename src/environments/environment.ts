@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:8080',
-  apiAuthUrl: 'http://localhost:8080/auth/'
+  apiBaseUrl: 'https://agile-basin-59013.herokuapp.com',
+  apiAuthUrl: 'https://agile-basin-59013.herokuapp.com/auth/'
 };
 
 /*
