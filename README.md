@@ -1,4 +1,8 @@
 # PortfolioArgPro
+frontend del proyecto final de argentina programa
+para entrar a editar
+user:admin
+pass:admin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
