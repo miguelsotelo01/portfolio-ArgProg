@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "frontend-argentina-programa"
-  }
+    "default": "frontend-argentina-programa",
+    "firebase use <frontend argentina programa>": "backend-arg-pro"
+  },
+  "targets": {}
 }
