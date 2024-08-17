@@ -1,5 +1,4 @@
-# PortfolioArgPro
-frontend del proyecto final de argentina programa
-para entrar a editar
+# Portfolio 
+credenciales
 user:admin
 pass:admin
