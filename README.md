@@ -1,4 +1,4 @@
 # Portfolio 
 credenciales
-user:admin
+user:admin  
 pass:admin
