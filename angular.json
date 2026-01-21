@@ -109,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "portfolioArgPro"
+  "defaultProject": "portfolioArgPro",
+  "cli": {
+    "analytics": "45674b02-940a-4291-8dcb-6ae5e8a36454"
+  }
 }
